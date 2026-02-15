@@ -2,23 +2,13 @@ import React from 'react';
 import { Page } from './types';
 
 export const Icons = {
-  logo: (props: React.SVGProps<SVGSVGElement>) => (
-    <svg {...props} viewBox="0 0 52 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-          <linearGradient id="logo-gradient-primary" x1="0" y1="0" x2="1" y2="1">
-              <stop stopColor="#38bdf8"/>
-              <stop offset="1" stopColor="#0369a1"/>
-          </linearGradient>
-          <linearGradient id="logo-gradient-accent" x1="1" y1="0" x2="0" y2="1">
-              <stop stopColor="#f472b6"/>
-              <stop offset="1" stopColor="#ec4899"/>
-          </linearGradient>
-      </defs>
-      <path d="M2 46L2 2L26 26L2 46Z" fill="url(#logo-gradient-primary)"/>
-      <path d="M50 2L50 46L26 26L50 2Z" fill="url(#logo-gradient-accent)"/>
-      <path d="M26 34C29.3137 34 32 31.3137 32 28C32 24.6863 29.3137 22 26 22C22.6863 22 20 24.6863 20 28C20 31.3137 22.6863 34 26 34Z" fill="white" fillOpacity="0.2"/>
-      <circle cx="26" cy="28" r="3" fill="white"/>
-  </svg>
+  logo: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    <img 
+      {...props} 
+      src="https://peeuumxfdqznbcavwscd.supabase.co/storage/v1/object/public/images/1771168919955-igdfsoc.png" 
+      alt="Mira Logo" 
+      className={`object-contain rounded-lg ${props.className || ''}`} 
+    />
   ),
   dashboard: (props: React.SVGProps<SVGSVGElement>) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
